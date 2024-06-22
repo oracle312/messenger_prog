@@ -48,18 +48,18 @@ namespace testDB
                 nod.Nodes.Add(dr["user_name"].ToString());
             }*/
 
-            
+            //
 
-            int i = 0;
+            
             foreach (IGrouping<string, string> user_team in dt.Rows.Cast<DataRow>().GroupBy(dr => dr["user_team"].ToString(), dr => dr["user_name"].ToString()))
             {
                 TreeNode nod = new TreeNode(user_team.Key);
 
                 foreach (string user_name in user_team)
-                    nod.Nodes.Add(user_name);
+                   nod.Nodes.Add(user_name);
 
                 tree_member.Nodes.Add(nod);
-                i++; 
+                 
             }
 
             /*try
