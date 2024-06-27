@@ -33,6 +33,7 @@
             this.label_lastlogin = new MetroFramework.Controls.MetroLabel();
             this.tree_member = new System.Windows.Forms.TreeView();
             this.sql_connect = new System.Windows.Forms.Timer(this.components);
+            this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.SuspendLayout();
             // 
             // label_userinfo
@@ -65,11 +66,20 @@
             // 
             this.sql_connect.Tick += new System.EventHandler(this.sql_connect_Tick);
             // 
+            // metroButton1
+            // 
+            this.metroButton1.Location = new System.Drawing.Point(214, 314);
+            this.metroButton1.Name = "metroButton1";
+            this.metroButton1.Size = new System.Drawing.Size(171, 27);
+            this.metroButton1.TabIndex = 5;
+            this.metroButton1.Text = "metroButton1";
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(562, 440);
+            this.Controls.Add(this.metroButton1);
             this.Controls.Add(this.tree_member);
             this.Controls.Add(this.label_lastlogin);
             this.Controls.Add(this.label_userinfo);
@@ -88,5 +98,6 @@
         public MetroFramework.Controls.MetroLabel label_lastlogin;
         private System.Windows.Forms.TreeView tree_member;
         private System.Windows.Forms.Timer sql_connect;
+        private MetroFramework.Controls.MetroButton metroButton1;
     }
 }
